@@ -1,14 +1,20 @@
 scene.setBackgroundColor(0)
+let Ak47 = 1
 info.setScore(0)
-tiles.setCurrentTilemap(tilemap`level`)
 forever(function () {
-    if ((0 as any) == (true as any)) {
-        info.changeScoreBy(1)
+    let USPS = 0
+    if (USPS == 1) {
+        if (controller.A.isPressed()) {
+            music.play(music.createSong(assets.song`AK-47`), music.PlaybackMode.InBackground)
+            pause(300)
+        }
     }
 })
 forever(function () {
-    if (controller.A.isPressed()) {
-        music.play(music.createSong(assets.song`USP-S1`), music.PlaybackMode.InBackground)
-        pause(400)
+    if (Ak47 == 1) {
+        if (controller.A.isPressed()) {
+            music.play(music.createSong(assets.song`AK-47`), music.PlaybackMode.InBackground)
+            pause(75)
+        }
     }
 })
